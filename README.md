@@ -4,4 +4,11 @@ Following [this](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tut
 
 **Notes**
 - Canvas element creates fixed size drawing surface called contexts. 2D and 3D contexts are available. `canvas.getContext("2d")`
-- 
+- Unlike SVG, canvas only supports two shapes; rectangles and paths
+- For rectangle
+    ```
+    fillRect(x, y, width, height) -> Draw filled rectangle
+    strokeRect(x, y, width, height) -> Draw stroked rectangle
+    clearRect(x, y, width, height) -> Clear specefied rectangular area
+
+    ```
