@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Canvas Basic Usage</title>
+    <style>
+      #tutorial {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="tutorial" width="150" height="150">
+      Fallback content goes here
+    </canvas>
+
+    <script>
+      const canvas = document.getElementById("tutorial");
+      const ctx = canvas.getContext("2d");
+
+      ctx.beginPath();
+      ctx.moveTo(25, 25)
+      ctx.lineTo(25, 100);
+      ctx.lineTo(100, 100);
+      ctx.lineTo(25, 25);
+      ctx.fill();
+    
+      ctx.beginPath();
+      ctx.moveTo(125, 125);
+      ctx.lineTo(125, 45);
+      ctx.lineTo(45, 125);
+      ctx.closePath(); // path would not have been closed if left out, two lines would have been formed
+      ctx.stroke();
+
+    </script>
+  </body>
+</html>
