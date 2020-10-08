@@ -12,3 +12,11 @@ Following [this](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tut
     clearRect(x, y, width, height) -> Clear specefied rectangular area
 
     ```
+    
+- For Paths
+    ``` 
+    beginPath() -> create a new path 
+    closePath() -> closes the path
+    stroke() -> add stroke to path
+    fill() -> add fill to path
+    ```
