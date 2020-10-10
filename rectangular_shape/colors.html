@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Canvas Basic Usage</title>
+    <style>
+      #tutorial {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="tutorial" width="150" height="150">
+      Fallback content goes here
+    </canvas>
+
+    <script>
+      const canvas = document.getElementById("tutorial");
+      const ctx = canvas.getContext("2d");
+
+      const rectSize = 150 / 6; // six squares can be drawn
+
+      for (let i = 0; i < 6; i++) {
+        for (let j = 0; j < 6; j++) {
+          ctx.fillStyle = `rgb(${(255 / 6) * i},${(255 / 6) * j}, ${
+            (255 / 6) * 0
+          })`;
+          ctx.fillRect(i * rectSize, j * rectSize, rectSize, rectSize);
+        }
+      }
+
+      for (let i = 0; i < 6; i++) {
+        for (let j = 0; j < 6; j++) {
+          ctx.strokeStyle = `rgb(0,0,0)`;
+          ctx.beginPath();
+          ctx.arc(i * rectSize, j * rectSize, rectSize / 2, 0, 2 * Math.PI);
+          ctx.stroke();
+        }
+      }
+    </script>
+  </body>
+</html>
